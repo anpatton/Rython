@@ -13,3 +13,7 @@ There is literally no order to how things occur beyond the first one where I loa
 ### 0) Load iris as dataframe
 ### 1) Split data into train/test sets
 ### 2) Split a dataframe into parts based on levels of a categorical variable
+### 3) Conditional column creation/editing
+### 4) Change the backgrounds of plot
+### 5) Change the backgrounds of plot
+
