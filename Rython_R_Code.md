@@ -56,18 +56,18 @@ iris %>%
 ```
 
     ##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species new_column_basic
-    ## 1          4.6         3.1          1.5         0.2     setosa              cat
-    ## 2          4.9         3.6          1.4         0.1     setosa              cat
-    ## 3          6.0         2.9          4.5         1.5 versicolor              cat
-    ## 4          6.0         3.0          4.8         1.8  virginica              cat
-    ## 5          7.2         3.0          5.8         1.6  virginica              cat
-    ## 6          4.8         3.4          1.6         0.2     setosa              cat
+    ## 1          6.0         2.2          4.0         1.0 versicolor              cat
+    ## 2          6.3         2.5          5.0         1.9  virginica              cat
+    ## 3          4.3         3.0          1.1         0.1     setosa              cat
+    ## 4          6.2         2.2          4.5         1.5 versicolor              cat
+    ## 5          4.4         2.9          1.4         0.2     setosa              cat
+    ## 6          5.0         3.2          1.2         0.2     setosa              cat
     ##   new_column_conditional
-    ## 1         this is setosa
-    ## 2         this is setosa
-    ## 3            this is not
+    ## 1            this is not
+    ## 2            this is not
+    ## 3         this is setosa
     ## 4            this is not
-    ## 5            this is not
+    ## 5         this is setosa
     ## 6         this is setosa
 
 ## 4\) Change the background of plot
@@ -81,7 +81,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
         panel.background = element_rect(fill = '#7392B7')) ## hex for color
 ```
 
-![](Rython-_R_Code_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](Rython_R_Code_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ## 5\) Grouped aggregations with multiple functions and variables
 
