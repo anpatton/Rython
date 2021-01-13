@@ -16,4 +16,4 @@ There is literally no order to how things occur beyond the first one where I loa
 ### 3) Conditional column creation/editing
 ### 4) Change the backgrounds of plot
 ### 5) Change the backgrounds of plot
-
+### 6) Get linear regrssion summary plot

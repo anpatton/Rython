@@ -56,19 +56,19 @@ iris %>%
 ```
 
     ##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species new_column_basic
-    ## 1          6.0         2.2          4.0         1.0 versicolor              cat
-    ## 2          6.3         2.5          5.0         1.9  virginica              cat
-    ## 3          4.3         3.0          1.1         0.1     setosa              cat
-    ## 4          6.2         2.2          4.5         1.5 versicolor              cat
-    ## 5          4.4         2.9          1.4         0.2     setosa              cat
-    ## 6          5.0         3.2          1.2         0.2     setosa              cat
+    ## 1          5.1         3.5          1.4         0.3     setosa              cat
+    ## 2          5.1         2.5          3.0         1.1 versicolor              cat
+    ## 3          6.7         3.0          5.2         2.3  virginica              cat
+    ## 4          6.3         2.8          5.1         1.5  virginica              cat
+    ## 5          6.8         3.0          5.5         2.1  virginica              cat
+    ## 6          5.4         3.0          4.5         1.5 versicolor              cat
     ##   new_column_conditional
-    ## 1            this is not
+    ## 1         this is setosa
     ## 2            this is not
-    ## 3         this is setosa
+    ## 3            this is not
     ## 4            this is not
-    ## 5         this is setosa
-    ## 6         this is setosa
+    ## 5            this is not
+    ## 6            this is not
 
 ## 4\) Change the background of plot
 
@@ -101,3 +101,30 @@ iris %>%
     ## 1 setosa        50             250.             3.43              1.9
     ## 2 versicolor    50             297.             2.77              5.1
     ## 3 virginica     50             329.             2.97              6.9
+
+## 6\) Get a linear regression summary table
+
+``` r
+## y ~ x
+model = lm(Sepal.Length ~ Sepal.Width, data = iris)
+summary(model)
+```
+
+    ## 
+    ## Call:
+    ## lm(formula = Sepal.Length ~ Sepal.Width, data = iris)
+    ## 
+    ## Residuals:
+    ##     Min      1Q  Median      3Q     Max 
+    ## -1.5561 -0.6333 -0.1120  0.5579  2.2226 
+    ## 
+    ## Coefficients:
+    ##             Estimate Std. Error t value Pr(>|t|)    
+    ## (Intercept)   6.5262     0.4789   13.63   <2e-16 ***
+    ## Sepal.Width  -0.2234     0.1551   -1.44    0.152    
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Residual standard error: 0.8251 on 148 degrees of freedom
+    ## Multiple R-squared:  0.01382,    Adjusted R-squared:  0.007159 
+    ## F-statistic: 2.074 on 1 and 148 DF,  p-value: 0.1519
